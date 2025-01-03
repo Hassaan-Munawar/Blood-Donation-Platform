@@ -81,6 +81,7 @@ const receiverSchema = new mongoose.Schema({
   },
 });
 
+// for get delete post
 const validateReceiver = (receiver) => {
   const schema = Joi.object({
     userName: Joi.string().min(3).max(50).required(),
@@ -110,5 +111,35 @@ const validateReceiver = (receiver) => {
   return schema.validate(receiver);
 };
 
+// for put
+const validateReceiverUpdate = (receiver) => {
+  const schema = Joi.object({
+    userName: Joi.string().min(3).max(50).optional(),
+    email: Joi.string().email().optional(),
+    password: Joi.string().min(8).max(100).optional(),
+    age: Joi.number().min(0).max(120).optional(),
+    bloodGroup: Joi.string()
+      .valid("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-")
+      .optional(),
+    phone: Joi.string().min(10).max(15).optional(),
+    address: Joi.object({
+      area: Joi.string().optional(),
+      city: Joi.string().optional(),
+      state: Joi.string().optional(),
+      zip: Joi.string().optional(),
+    }),
+    urgent: Joi.boolean().optional(),
+    requirementDetails: Joi.object({
+      quantityRequired: Joi.number().min(1).optional(),
+      requiredDate: Joi.date().optional(),
+      reason: Joi.string().min(10).max(500).optional(),
+    }).optional(),
+    medicalHistory: Joi.array().items(Joi.string()),
+    verified: Joi.boolean(),
+  });
+
+  return schema.validate(receiver);
+};
+
 const receiver = mongoose.model("receiver", receiverSchema);
-export { receiver, validateReceiver };
+export { receiver, validateReceiver, validateReceiverUpdate };

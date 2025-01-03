@@ -1,6 +1,9 @@
 import express from "express";
-import { receiver, validateReceiver } from "../mongoDB/models/receiverModel.js";
-import { status } from "init";
+import {
+  receiver,
+  validateReceiver,
+  validateReceiverUpdate,
+} from "../mongoDB/models/receiverModel.js";
 import { json } from "stream/consumers";
 
 export const receiverRouter = express.Router();
@@ -58,7 +61,7 @@ receiverRouter.put("/:id", async (req, res) => {
     const receiverID = req.params.id;
     const receiverData = req.body;
 
-    const { error } = validateReceiver(receiverData);
+    const { error } = validateReceiverUpdate(receiverData);
     if (error) {
       res.status(400).json({
         status: 400,

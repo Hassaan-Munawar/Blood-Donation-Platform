@@ -67,7 +67,7 @@ const donorSchema = new mongoose.Schema({
   },
 });
 
-// Joi validation schema
+// Joi validation schema for post get and delete
 const validateDonor = (donor) => {
   const schema = Joi.object({
     userName: Joi.string().min(3).max(50).required(),
@@ -93,7 +93,34 @@ const validateDonor = (donor) => {
   return schema.validate(donor);
 };
 
+// Joi validation schema for put
+// Joi validation schema
+const validateDonorUpdate = (donor) => {
+  const schema = Joi.object({
+    userName: Joi.string().min(3).max(50).optional(),
+    email: Joi.string().email().optional(),
+    password: Joi.string().min(8).max(100).optional(),
+    age: Joi.number().min(18).max(65).optional(),
+    bloodGroup: Joi.string()
+      .valid("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-")
+      .optional(),
+    phone: Joi.string().min(10).max(15).optional(),
+    address: Joi.object({
+      area: Joi.string().optional(),
+      city: Joi.string().optional(),
+      state: Joi.string().optional(),
+      zip: Joi.string().optional(),
+    }).optional(),
+    availability: Joi.boolean().optional(),
+    lastDonationDate: Joi.date().allow(null),
+    medicalConditions: Joi.array().items(Joi.string()),
+    verified: Joi.boolean(),
+  });
+
+  return schema.validate(donor);
+};
+
 // Export the model and validation function
 const Donor = mongoose.model("donor", donorSchema);
 
-export { Donor, validateDonor };
+export { Donor, validateDonor, validateDonorUpdate };

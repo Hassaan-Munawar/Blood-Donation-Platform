@@ -1,5 +1,9 @@
 import express from "express";
-import { Donor, validateDonor } from "../mongoDB/models/donorModel.js";
+import {
+  Donor,
+  validateDonor,
+  validateDonorUpdate,
+} from "../mongoDB/models/donorModel.js";
 
 export const donorRouter = express.Router();
 
@@ -56,7 +60,7 @@ donorRouter.put("/:id", async (req, res) => {
     const donorID = req.params.id;
     const updatedData = req.body;
 
-    const { error } = validateDonor(updatedData);
+    const { error } = validateDonorUpdate(updatedData);
     if (error) {
       return res.status(400).json({
         status: 400,
