@@ -53,7 +53,7 @@ receiverRouter.get("/", async (req, res) => {
 
 //put
 
-receiverRouter.put("/", async (req, res) => {
+receiverRouter.put("/:id", async (req, res) => {
   try {
     const receiverID = req.params.id;
     const receiverData = req.body;
@@ -95,7 +95,7 @@ receiverRouter.put("/", async (req, res) => {
 });
 
 // delte
-receiverRouter.delete("/", async (req, res) => {
+receiverRouter.delete("/:id", async (req, res) => {
   try {
     const receiverID = req.params.id;
     const deletedReceiver = await receiver.findByIdAndDelete(receiverID);
