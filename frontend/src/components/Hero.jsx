@@ -5,17 +5,17 @@ function Hero() {
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden bg-white pt-0  md:pt-24">
     {/* Left side shape image */}
-    <div className="hidden md:block absolute left-0 top-0 h-full w-[46%]">
+    <div className="hidden md:block absolute left-0 top-0 h-full w-[50%]">
       <img
         src={hero}
         alt="Decorative shape"
-        className="w-full h-full object-cover object-left"
+        className="w-full h-full"
       />
     </div>
 
     {/* Content */}
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="relative px-4 sm:px-6 lg:px-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center items-center">
         {/* Left side - empty for the background shape */}
         <div></div>
         
