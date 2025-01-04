@@ -6,7 +6,7 @@ function AboutUs() {
             <div className="mx-auto">
                 {/* Header */}
                 <header className="py-6">
-                    <h1 className="text-3xl px-4 mx-6 text-white py-6 bg-gradient-to-r from-[#500732] to-[#A8174E] font-bold">About Us</h1>
+                    <h1 className="text-3xl px-4 rounded-md mx-6 text-white py-6 bg-gradient-to-r from-[#500732] to-[#A8174E] font-bold">About Us</h1>
                     
                 </header>
 

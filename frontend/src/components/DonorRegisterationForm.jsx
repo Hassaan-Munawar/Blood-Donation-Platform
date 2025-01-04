@@ -4,7 +4,7 @@ export default function DonorRegistrationForm() {
       <div className="min-h-screen mb-20 p-4">
         <div className="mx-auto">
           {/* Header */}
-          <div className="mx-6 bg-gradient-to-r from-[#500732] to-[#A8174E] p-6">
+          <div className="mx-6 bg-gradient-to-r rounded-md from-[#500732] to-[#A8174E] p-6">
             <h1 className="text-2xl font-bold text-white">Register As Donor</h1>
           </div>
   
