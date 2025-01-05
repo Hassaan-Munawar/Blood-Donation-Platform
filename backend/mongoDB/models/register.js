@@ -1,7 +1,7 @@
 import express from "express";
 import Joi from "joi";
 import mongoose from "mongoose";
-
+import { hashPassword } from "./utils.js";
 export const registerUser = new mongoose.Schema({
   UserName: {
     type: String,
@@ -26,6 +26,14 @@ export const registerUser = new mongoose.Schema({
     minLength: 10,
     maxLength: 15,
   },
+});
+
+// Hash password before saving
+registerUser.pre("save", async function (next) {
+  if (this.isModified("password")) {
+    this.password = await hashPassword(this.password);
+  }
+  next();
 });
 
 const validateRegisterUser = (registerUser) => {
