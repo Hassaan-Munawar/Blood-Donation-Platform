@@ -1,4 +1,3 @@
-import express from "express";
 import Joi from "joi";
 import mongoose from "mongoose";
 import { hashPassword } from "./utils.js";
