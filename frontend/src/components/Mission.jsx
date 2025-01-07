@@ -8,7 +8,7 @@ function Mission() {
   };
 
   return (
-    <section className="py-16 lg:my-10 px-4 md:px-8 max-w-7xl mx-auto">
+    <section className="py-16 lg:my-10 px-4 md:px-8">
       {/* Mission Section */}
       <div
         style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}
@@ -17,6 +17,7 @@ function Mission() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
         <p className="text-gray-600 leading-relaxed">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis blanditiis maxime quam expedita facere, dolorem quas velit officia totam ea ab. Porro est quos reprehenderit dolores facere nihil at ratione! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit aliquid adipisci et similique nihil reiciendis dolor vero voluptate ex ipsa, iure quia delectus numquam, ratione illo, reprehenderit veniam minus!
         </p>
       </div>
 

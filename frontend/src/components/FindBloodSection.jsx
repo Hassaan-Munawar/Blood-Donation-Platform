@@ -69,11 +69,6 @@ function FindBloodSection() {
                         more compassionate community.
                     </p>
                 </section>
-
-                {/* Footer */}
-                <footer className="mt-12 text-center text-gray-600">
-                    <p>&copy; {new Date().getFullYear()} Your Organization. All rights reserved.</p>
-                </footer>
             </div>
         </div>
     );
