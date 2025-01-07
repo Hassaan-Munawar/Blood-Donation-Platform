@@ -75,6 +75,7 @@ function Footer() {
             <a href="#" className="hover:text-gray-300">Terms & Conditions</a>
             <a href="#" className="hover:text-gray-300">Privacy Policy</a>
           </div>
+          <p className='mb-6 md:mb-0'>&copy; {new Date().getFullYear()} Your Organization. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gray-300">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
