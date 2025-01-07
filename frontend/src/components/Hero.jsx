@@ -3,7 +3,7 @@ import hero from '../assets/hero.png'
 
 function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-white pt-0  md:pt-24">
+    <div className="relative min-h-screen flex items-center overflow-hidden bg-white">
     {/* Left side shape image */}
     <div className="hidden md:block absolute left-0 top-0 h-full w-[50%]">
       <img
@@ -15,7 +15,7 @@ function Hero() {
 
     {/* Content */}
     <div className="relative px-4 sm:px-6 lg:px-8 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
         {/* Left side - empty for the background shape */}
         <div></div>
         

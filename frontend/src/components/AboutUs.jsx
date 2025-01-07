@@ -36,11 +36,6 @@ function AboutUs() {
                         where our solutions create a lasting impact and help shape a better world.
                     </p>
                 </section>
-
-                {/* Footer */}
-                <footer className="mt-12 text-center">
-                    <p>&copy; {new Date().getFullYear()} Your Organization. All rights reserved.</p>
-                </footer>
             </div>
         </div>
     );
