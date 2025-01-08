@@ -3,7 +3,7 @@ import hero from '../assets/hero.png'
 
 function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-white">
+    <div className="relative md:min-h-screen flex items-start md:items-center overflow-hidden bg-white">
     {/* Left side shape image */}
     <div className="hidden md:block absolute left-0 top-0 h-full w-[50%]">
       <img
@@ -28,7 +28,7 @@ function Hero() {
             Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
           <a
-            href="/"
+            href="/findblood"
             className="inline-flex items-center px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-base font-medium"
           >
             Get Blood Now

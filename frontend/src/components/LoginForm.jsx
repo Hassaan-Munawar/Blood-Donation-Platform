@@ -3,10 +3,10 @@ import submit from '../assets/submit.png';
 
 function LoginForm() {
   return (
-    <div className="min-h-screen pb-20 flex items-center justify-center">
+    <div className="min-h-screen pb-28 flex items-center justify-center">
       <div className="w-full max-w-md p-4">
         {/* Header */}
-        <div className="bg-gradient-to-r rounded-md from-[#500732] to-[#A8174E] p-6 text-center">
+        <div className="bg-gradient-to-r mx-4 rounded-md from-[#500732] to-[#A8174E] p-6 text-center">
           <h1 className="text-2xl font-bold text-white">Login</h1>
         </div>
 
