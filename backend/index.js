@@ -3,6 +3,9 @@ import "dotenv/config.js";
 import { mongoDBConnect } from "./mongoDB/connectDB.js";
 import { donorRouter } from "./routes/donors.js";
 import { receiverRouter } from "./routes/receivers.js";
+import { registerUserRouter } from "./routes/register.js";
+import { loginUserRouter } from "./routes/login.js";
+import { organizationRoute } from "./routes/organizations.js";
 
 const app = express();
 app.use(express.json());
@@ -15,6 +18,9 @@ try {
   mongoDBConnect();
   app.use("/donors", donorRouter);
   app.use("/receivers", receiverRouter);
+  app.use("/users", registerUserRouter);
+  app.use("/login", loginUserRouter);
+  app.use("/organizations", organizationRoute);
 } catch (error) {
   console.log("🚀 ~ error:", error);
 }
