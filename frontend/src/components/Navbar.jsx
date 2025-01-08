@@ -22,15 +22,15 @@ function Navbar() {
 
   return (
     <nav
-      className={`${window.location.pathname !== '/' ? 'relative' : 'absolute'
+      className={`relative ${window.location.pathname !== '/' ? 'md:relative' : 'md:absolute'
         } top-0 left-0 right-0 z-50`}
     >
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <div className="flex justify-center items-center">
+          <Link to={'/'} onClick={()=> {setIsMenuOpen(false), setDestination('/')}} className="flex justify-center items-center">
             <img className="w-12 h-12" src={drop} alt="Logo" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-12">
@@ -234,7 +234,7 @@ function Navbar() {
             <Link
               to="/login"
               className="block text-white bg-[#8B1538] text-base font-medium hover:bg-[#6B102A] px-4 py-2 rounded-md transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {setDestination(''), setIsMenuOpen(false)}}
             >
               Log In
             </Link>
