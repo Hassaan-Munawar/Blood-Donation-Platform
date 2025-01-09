@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import drop from "../assets/Logo.png";
+import React, { useState } from "react";
+import drop from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
