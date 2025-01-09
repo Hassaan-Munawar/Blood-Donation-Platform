@@ -1,5 +1,5 @@
 import React from "react";
-import vector from "../assets/Vector.png";
+import vector from "../assets/vector.png";
 
 function Footer() {
   return (
