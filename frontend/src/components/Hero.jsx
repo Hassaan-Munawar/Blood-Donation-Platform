@@ -3,9 +3,9 @@ import hero from '../assets/hero.png'
 
 function Hero() {
   return (
-    <div className="relative md:min-h-screen flex items-start md:items-center overflow-hidden bg-white">
+    <div className="relative min-h-[90vh] md:min-h-screen flex items-start md:items-center overflow-hidden bg-white">
     {/* Left side shape image */}
-    <div className="hidden md:block absolute left-0 top-0 h-full w-[50%]">
+    <div className="hidden md:block absolute left-0 top-0 h-full w-[55%]">
       <img
         src={hero}
         alt="Decorative shape"
@@ -15,12 +15,12 @@ function Hero() {
 
     {/* Content */}
     <div className="relative px-4 sm:px-6 lg:px-8 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-end">
         {/* Left side - empty for the background shape */}
         <div></div>
         
         {/* Right side content */}
-        <div className="text-center md:text-left z-10">
+        <div className="text-center md:text-right z-10">
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-gray-900 mb-8 leading-tight">
             Save Life Donate Blood
           </h1>

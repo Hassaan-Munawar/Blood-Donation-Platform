@@ -60,6 +60,23 @@ function OrganizationRegistrationForm() {
                         />
                     </div>
 
+                    {/* Services */}
+
+                    <div className="flex flex-col md:flex-row items-start gap-4">
+                        <label
+                            htmlFor="services"
+                            className="w-full md:w-40 text-left md:text-right pt-2 text-sm text-gray-600"
+                        >
+                           Services
+                        </label>
+                        <input
+                            type="text"
+                            id="services"
+                            className="flex-1 p-2 border w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Services"
+                        />
+                    </div>
+
                     {/* Phone Number */}
                     <div className="flex flex-col md:flex-row items-start gap-4">
                         <label
