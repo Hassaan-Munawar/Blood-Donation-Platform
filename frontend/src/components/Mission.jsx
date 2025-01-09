@@ -8,7 +8,7 @@ function Mission() {
   };
 
   return (
-    <section className="py-16 lg:my-10 px-4 md:px-8">
+    <section className="md:py-16 md:my-10 px-4 md:px-8">
       {/* Mission Section */}
       <div
         style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}

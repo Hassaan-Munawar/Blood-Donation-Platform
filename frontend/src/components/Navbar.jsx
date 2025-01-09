@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import drop from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -19,11 +19,11 @@ function Navbar() {
   const handleRegisterClick = () => {
     setShowDropdown((prev) => !prev);
   };
-
+  
   return (
     <nav
       className={`relative ${window.location.pathname !== '/' ? 'md:relative' : 'md:absolute'
-        } top-0 left-0 right-0 z-50`}
+        } min-h-[10vh] top-0 left-0 right-0 z-50`}
     >
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
